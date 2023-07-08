@@ -1,0 +1,106 @@
+@import "./clamp-calculate.scss";
+@import "./flex-me.scss";
+
+.footer {
+  background-color: #1f1f1f;
+  height: 100%;
+  //   width: 100%;
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  row-gap: clampCalculate(20, 60);
+  justify-content: space-between;
+  padding: clampCalculate(4, 60) clampCalculate(4, 90);
+
+  .footer_icons {
+    display: flex;
+    padding: 0 1.5rem;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    row-gap: clampCalculate(16, 64);
+    h3 {
+      color: #ecf1f0;
+
+      font-size: clampCalculate(16, 24);
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+
+      span {
+        color: #0fae96;
+      }
+    }
+
+    div {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      height: 100%;
+      width: 100%;
+      row-gap: clampCalculate(12, 32);
+      img {
+        height: 100%;
+        width: 100%;
+      }
+
+      .icn {
+        @include flexMe(row, flex-start, center);
+        column-gap: clampCalculate(12, 24);
+      }
+
+      p {
+        font-size: clampCalculate(12, 16);
+        font-style: normal;
+        font-weight: 400;
+        line-height: 24px;
+        margin: 0px;
+      }
+    }
+  }
+
+  .footer_links {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1.5rem;
+    // margin: 0 auto;
+    max-width: 732px;
+
+    height: 100%;
+    color: #fff;
+    flex-wrap: wrap;
+    column-gap: clampCalculate(20, 86);
+    row-gap: clampCalculate(12, 24);
+
+    h3 {
+      font-size: clampCalculate(14, 18);
+      font-style: normal;
+      font-weight: 600;
+      line-height: clampCalculate(18, 22);
+    }
+
+    ul {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+      row-gap: clampCalculate(14, 20);
+      margin-top: clampCalculate(14, 20);
+
+      li {
+        font-size: clampCalculate(12, 16);
+        font-style: normal;
+        font-weight: 400;
+        line-height: clampCalculate(16, 24);
+      }
+    }
+  }
+
+//   @media screen and (max-width: 768px) {
+
+    
+//   }
+}
