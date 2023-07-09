@@ -1,17 +1,34 @@
-.hero_right {
-    background-image: url('../assets/hero.svg');
+@import './clamp-calculate.scss';
+@import './flex-me.scss'; 
+
+.wrapper {
+    margin: auto;
+    border: 2px solid red ;
+  
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 24px;
+  .hero_right {
+    background-image: url("../assets/hero.svg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    height: 100%;
-    width: 100%;
-    position: absolute;
-    top: 0;
-    right: 0;
-    z-index: -1;
-    opacity: 0.5;
+    width: 382px;
+    height: 382px;
+   
 
     @media (max-width: 768px) {
-        display: none;
+      display: none;
     }
+  }
+
+  .hero_left {
+     
+   @flexMe(column, flex-start, center);
+    width: clampCalculate(180, 788);
+     
+    gap: 10px;
+     
+  }
 }

@@ -15,9 +15,9 @@ function App() {
     <>
       <NavBar />
       <TopBanner />
-      <TopTrends />
+      {/* <TopTrends />
       <AmazingFeatures />
-      <Footer />
+      <Footer /> */}
     </>
   );
 }
